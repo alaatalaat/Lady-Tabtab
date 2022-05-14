@@ -1,0 +1,41 @@
+<div class="container py-5">
+  <div class="row">
+    <div class="col-sm-12 col-md-4">
+      <div>
+        <img [src]="prodImg" alt="" width="100%">
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-8 mt-sm-5 mt-md-0">
+      <div class="mt-4 mt-md-0">
+        <div class="">
+          <h3>{{prodName}}</h3>
+        </div>
+        <div class="mt-4">
+          <b class="float-rigt">الحجم : <span> {{size}} </span></b>
+          <b class="float-left">السعر : <span>{{price}} جنيه </span></b>
+        </div><br>
+        <div class="mt-3">
+          <p class="mb-1"><b>تفاصيل المنتج : </b></p>
+          <p>{{productDetails}}</p>
+        </div>
+        <div *ngIf="productContent1">
+          <p class="mt-2"><b>مكونات المنتج</b></p>
+          <ul>
+            <li *ngIf="productContent1">{{productContent1}}</li>
+            <li *ngIf="productContent2">{{productContent2}}</li>
+            <li *ngIf="productContent3">{{productContent3}}</li>
+            <li *ngIf="productContent4">{{productContent4}}</li>
+            <li *ngIf="productContent5">{{productContent5}}</li>
+            <li *ngIf="productContent6">{{productContent6}}</li>
+            <li *ngIf="productContent7">{{productContent7}}</li>
+            <li *ngIf="productContent8">{{productContent8}}</li>
+          </ul>
+        </div>
+        <div>
+          <p><b>طريقة الاستخدام</b></p>
+          <p>{{use}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

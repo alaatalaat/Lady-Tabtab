@@ -1,0 +1,18 @@
+.card{
+  img{height:250px;}
+  .title{
+    color:#d90429;
+    h5{
+      font-weight:bold;
+      span{float:left;color:#003049}
+    }
+  }
+  p{
+    text-overflow:ellipsis;
+    white-space:nowrap ;
+    overflow:hidden;
+  }
+  .btn{
+    background:#fca311;color:#fff;width:100%;box-shadow:none;outline:none;
+  }
+}

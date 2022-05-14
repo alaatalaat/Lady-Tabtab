@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="row my-5">
+    <div class="col-lg-4 col-md-6 col-sm-10 mx-auto">
+       <div class="card text-center">
+          <div>
+            <img src="../../assets/logo.webp" width="150px" height="150px">
+          </div>
+          <div>
+            <form [formGroup]="loginForm">
+              <div class="mx-5 have-input">
+                <i class="fa fa-envelope my-auto" aria-hidden="true"></i>
+                <input class="form-control" type="text" placeholder="البريد الالكتروني" formControlName="email">
+              </div>
+              <div class="mx-5 have-input">
+                <i class="fa fa-lock my-auto" aria-hidden="true"></i>
+                <input class="form-control" type="password" placeholder="كلمة المرور" formControlName="password">
+                <i class="fa fa-eye-slash" #eye aria-hidden="true" (click)="togglePassword(eye)"></i>
+              </div>
+
+              <div class="mx-5">
+                <button class="btn w-100" (click)="getUsers()">تسجيل الدخول</button>
+              </div>
+              <div class="mx-5">
+                <button class="btn w-100">تصفحي منتجاتنا</button>
+              </div>
+            </form>
+          </div>
+       </div>
+    </div>
+  </div>
+</div>

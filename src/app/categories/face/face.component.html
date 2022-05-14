@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="container-fluid">
+  <div class="row my-5">
+    <div class="col-sm-12 col-md-3" *ngFor="let face of allData">
+      <div>
+        <div class="card my-3">
+          <img [src]="face.img" [routerLink]="['/face',face.id]">
+          <div class="py-3 px-2">
+            <div class="title">
+              <h5> {{face.name}}
+                <span>{{face.price}} جنية</span>
+              </h5>
+            </div>
+            <p >{{face.productDetails}}</p>
+            <a class="btn" (click)="addToCart(face)">اضف الي العربة</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+

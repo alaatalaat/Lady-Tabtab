@@ -1,0 +1,36 @@
+<app-header></app-header>
+<ng-container *ngIf="faceProducts.length != 0">
+  <div class="container my-5">
+    <div class="row bg-light mt-2 py-4" *ngFor="let prod of faceProducts">
+      <div class="col-sm-3">
+        <div class="text-center">
+          <img [src]="prod.img" width="200px" height="100px">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div>
+          <p class="mb-1"><b>{{prod.name}}</b></p>
+          <p>{{prod.productDetails}}</p>
+        </div>
+      </div>
+      <div class="col-sm-3 trash">
+        <i class="fa fa-trash-o" aria-hidden="true" (click)=" removeFaceItem(prod)"></i>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div>
+      <p><b>اجمالي الحساب :</b> {{faceTotal}} <i class="fa fa-money" aria-hidden="true"></i> </p>
+    </div>
+  </div>
+</ng-container>
+
+
+
+<ng-container *ngIf="faceProducts.length == 0">
+  <div class="text-center">
+    <img src="../../../assets/logo.webp" alt="">
+    <h3>عربة التسوق فارغة</h3>
+    <button class="btn" routerLink="/categories">تسوق الأن</button>
+  </div>
+</ng-container>
